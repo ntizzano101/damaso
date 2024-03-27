@@ -103,6 +103,11 @@
 						<?php } ?>
 						</select>
 					</div>
+					<div class="form-group">
+						<label for="cbu">CBU</label>
+						 <?php echo form_error('cbu'); ?>	
+						  <?php	echo form_input('cbu',$alumno->cbu,'class="form-control"'); ?>
+					</div>
 					<input type="submit" class="form-control btn-primary" value="Agregar"/>
 				</form>
 			  </div>

@@ -60,6 +60,7 @@ class Alumnos extends CI_Controller {
 						$aux->cuit=$this->input->post('cuit');
 						$aux->razonsocial=$this->input->post('razonsocial');
     					$aux->codiva=$this->input->post('codiva');
+						$aux->cbu=$this->input->post('cbu');
 						$data["alumno"]=$aux;
                         $this->load->view('encabezado.php',$data);
 						$this->load->view('menu.php',$data);
@@ -134,6 +135,7 @@ class Alumnos extends CI_Controller {
 			$aux->otros=$this->input->post('otros');
 			$aux->fechaingreso=$this->input->post('fechaingreso');
 			$aux->fechanacimiento=$this->input->post('fechanacimiento');
+			$aux->cbu=$this->input->post('cbu');
 				$aux->cuit=$this->input->post('cuit');
 						$aux->razonsocial=$this->input->post('razonsocial');
     					$aux->codiva=$this->input->post('codiva');
@@ -191,6 +193,10 @@ class Alumnos extends CI_Controller {
  public function es_cuit($cuit){
 	$this->load->library('funciones');
 	return $this->funciones->cuit($cuit);
+}
+public function es_cbu($cbu){
+	$this->load->library('funciones');
+	return $this->funciones->validCbu($cbu);
 }
  public function eliminar($p){
 	$this->load->library('funciones');

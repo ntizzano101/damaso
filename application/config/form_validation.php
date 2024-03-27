@@ -56,6 +56,12 @@ $config = array(
 					'label' => 'razonsocial',
 					'rules' => 'callback_es_razonsocial',
 					'errors'=>array('es_razonsocial'=>'Si ingreso CUIT debe ingrsar Razon Social')
+			),
+			array(
+					'field' => 'cbu',
+					'label' => 'cbu',
+					'rules' => 'callback_es_cbu',
+					'errors'=>array('es_cbu'=>'El cbu ingresado no es valido Revise')
 				)			
 	),
    'conceptos/editar'=>
