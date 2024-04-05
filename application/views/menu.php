@@ -54,17 +54,26 @@
             <li><a href="<?=base_url()?>cursos/nuevo/">Nuevo</a></li>
             <li><a href="<?=base_url()?>cursos">Listado</a></li>
           </ul>
-        </li>
-		
+        </li>      
+
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Facturas<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="<?=base_url()?>alumnos_cc/listar_facturas">Listar Facturas</a></li>
             <li><a href="<?=base_url()?>alumnos_cc/listar_ingresos">Listar Ingresos</a></li>
           </ul>
+         </li>  
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Debitos BBVA<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="<?=base_url()?>debito_automatico/nuevo">Nuevo</a></li>
+            <li><a href="<?=base_url()?>debito_automatico/listar">Listar</a></li>
+          </ul>  
+
         </li>
         <li><a href="<?=base_url()?>movimientos_caja/banco">BANCO</a></li>
-      </ul>
+        </ul>
+       
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $this->session->userdata("titulo") ?><span class="caret"></span></a>
