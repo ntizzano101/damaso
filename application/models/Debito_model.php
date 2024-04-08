@@ -14,7 +14,7 @@ class Debito_Model extends CI_Model {
             inner join conceptos g on g.id=c.id_concepto
             inner join (select max(id) as ident,cbu from alumnos where cbu<>'' group by cbu) as cbus 
             on a.cbu=cbus.cbu
-            where c.periodo=? and a.cbu<>'' order by cbus.cbu,cbus.ident,c.id_alumno
+            where c.periodo=? and a.cbu<>'' and c.original=c.pendiente and c.pendiente > 0  order by cbus.cbu,cbus.ident,c.id_alumno
             ";
             $debitos=$this->db->query($sql,$periodo)->result();
             $ident="";$cbu="";$id_alumno="";
