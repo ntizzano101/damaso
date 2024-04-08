@@ -252,7 +252,7 @@ class Debito_automatico extends CI_Controller {
               $pie.=str_repeat(" ",208).PHP_EOL;
 
 
-              file_put_contents("DAMA" . str_replace("-","",$fecha_archivo),$cabeza.$registros.$pie);
+              file_put_contents("debitos/DAMA" . str_replace("-","",$fecha_archivo),$cabeza.$registros.$pie);
 
 
               $data["fecha_archivo"]=$fecha_archivo;

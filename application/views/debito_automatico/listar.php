@@ -10,7 +10,8 @@
                             <option value="<?=$fe->fecha?>"><?=$fe->fechaf?></option>
                         <?php } ?>
                     </select>
-                    <a href="" class="btn success">Descargar</a>
+                    <br />
+                    <a href="" id="descargar" target="_blank" class="btn btn-success">Descargar</a>
                     <hr>
                     <table class="table table-hover">
                     <thead>
@@ -40,6 +41,8 @@ $(document).ready(function(){
         $("#fechas").change(function(){                
             $.post(CFG.url+"debito_automatico/debitos/", {fecha: $("#fechas").val()}, function(result){          
                 $("#tabla").html(result);
+                var f=$("#fechas").val().split("-");
+               $("#descargar").attr("href", CFG.url+"debitos/ver.php?archivo=DAMA"+f[0]+f[1]+f[2]);               
             });  
 	    });
 });
