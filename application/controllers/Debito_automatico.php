@@ -221,7 +221,7 @@ class Debito_automatico extends CI_Controller {
                  # campo 1
                  $reg4="4240";
                  #campo 2 Empresa    
-                $reg4.="37080";
+                $reg4.="17888";
                 # campo 3 libre  dos en blnco
                 $reg4.="  ";
                 # campo 4 Identificacion del beneficiarios es el ID del alumno 22 posiciones 
@@ -238,7 +238,7 @@ class Debito_automatico extends CI_Controller {
               # campo 1
               $pie="4910";
               #campo 2 Empresa    
-              $pie.="37080";
+              $pie.="17888";
               # campo 3 total entero 13 
               list($importe,$decimal)=explode(".",$total);
               $pie.=str_pad($importe,13,"0",STR_PAD_LEFT);
