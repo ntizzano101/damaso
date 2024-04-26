@@ -11,15 +11,15 @@
 			<?php } ?> 
 			<form action="<?=base_url()?>debito_automatico/ver" method="POST">
 					<div class="form-group">
-						<label for="nombre">Fecha Creacion del Debito</label>
-						<input type="date" name="fecha_archivo" value="<?=$fecha_archivo?>" class="form-control">
+						<label for="nombre">Fecha Creacion del Debito-HOY</label>
+						<input type="date" name="fecha_archivo" value="<?=$fecha_archivo?>" class="form-control" readonly="readonly">
 					</div>
 					<div class="form-group">
-						<label for="nombre">Fecha Proceso del Debito / Dia de Aplicacion</label>
+						<label for="nombre">Fecha Proceso del Debito / Dia que Se Sube archivo a NET-CASH</label>
 						<input type="date" name="fecha_proceso" value="<?=$fecha_proceso;?>" class="form-control">
 					</div>
 					<div class="form-group">
-						<label for="nombre">Fecha Vencimiento </label>
+						<label for="nombre">Fecha Vencimiento / Dia que impacta debito en cuenta del cliente</label>
 						<input type="date" name="fecha_vence" value="<?=$fecha_vence;?>" class="form-control">
 					</div>					
 						<?php # echo form_error('nombre'); ?>	
