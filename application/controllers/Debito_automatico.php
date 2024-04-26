@@ -126,7 +126,7 @@ class Debito_automatico extends CI_Controller {
         #campo 8 numero de cuenta
         $cabeza.="0103400706";
         #campo 9 Codigo de servicio
-        $cabeza.="CUOTA     ";
+        $cabeza.="CUOTAS    ";
         #campo 10 Divisa de la Cuenta 
         $cabeza.="ARS";
         # campo 11 fijo "0"
