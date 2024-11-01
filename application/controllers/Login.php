@@ -40,9 +40,14 @@ class Login extends CI_Controller {
 		$this->load->model('login_model');
 		$usu=$this->login_model->ingreso($usuario,$pass);
 		if($usu){
+				if($usu[0]->expirado!="S"){
 				$datos=array("usuario"=>$usu[0]->username,"titulo"=>$usu[0]->apellido . ", " . $usu[0]->nombre);
 				$this->session->set_userdata($datos);
 				redirect('alumnos/listado');			
+				}
+				else{
+					redirect('login/expirado');			
+				}
 		}
 		else{
 			$data["mensaje"]="Usuario o Password Incorrecto";
@@ -95,5 +100,12 @@ class Login extends CI_Controller {
 		redirect('login');
 
 	}
+	public function expirado()
+	{
+		$this->session->sess_destroy();
+		$this->load->view('alumnos/expirado');
+
+	}
+
 }
 ?>
